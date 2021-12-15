@@ -238,23 +238,7 @@ void MainWindow::on_pushButton_equ_clicked() //=
 {
     s+="=";
 
-    switch(sign)
-    {
-    case '+':
-        num1 = num1 + num2;
-        break;
-    case '-':
-        num1 = num1 - num2;
-        break;
-    case 'x':
-        num1 = num1 * num2;
-        break;
-    case '/':
-        num1 = num1 / num2;
-        break;
-    default:
-        break;
-    }
+    calculate(sign, &num1, &num2);
 
     s+=QString("%1").arg(num1);
     ui->textBrowser->setText(s);
